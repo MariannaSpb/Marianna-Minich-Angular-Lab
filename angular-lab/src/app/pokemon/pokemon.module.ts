@@ -9,6 +9,7 @@ import { PokemonItemComponent } from './pokemon-item/pokemon-item.component';
   declarations: [PokemonListComponent, PokemonItemComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [PokemonListComponent, PokemonItemComponent]
 })
 export class PokemonModule { }
