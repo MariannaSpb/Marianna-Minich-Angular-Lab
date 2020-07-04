@@ -1,1 +1,20 @@
-<p>pokemon-item works!</p>
+<li class="pokemon__item"
+[ngClass]="{bordered: isbordered}"
+>
+    <h2 class="pokemon__name">
+        {{ pokemon.name | uppercase }}
+    </h2>
+    <div class="pokemon__wrapper"
+        [ngClass]="{'hidden': style ==='row'}">
+        <div class="pokemon__inner">
+            <img class="pokemon__img" 
+            [src]="'../../../assets/images/' + pokemon.id + '.png'" alt="{{ pokemon.name }}" />
+            <p class="pokemon__damage">Damage: {{pokemon.damage}}</p>
+        </div>
+        <div class="pokemon__actions"
+            (click)="onClickHandler($event)">
+            <button class="pokemon__button pokemon__button--catch">Catch</button>
+            <button class="pokemon__button pokemon__button--release">Release</button>
+        </div>
+    </div>
+</li>

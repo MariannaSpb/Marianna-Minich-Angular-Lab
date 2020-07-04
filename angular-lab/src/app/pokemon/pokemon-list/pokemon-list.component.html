@@ -1,1 +1,13 @@
-<p>pokemon-list works!</p>
+<section class="pokemon">  
+    <ul class="pokemon__list"
+    [ngClass]="{'pokemon__list--lines': style ==='row'}">
+        <app-pokemon-item *ngFor="let pokemon of pokemonsList"
+            [pokemon]="pokemon"
+            (actionValue)="getAction($event)"
+            [id]="pokemon.id"
+            [style]="style"
+            >
+        </app-pokemon-item>
+    </ul>
+</section> 
+

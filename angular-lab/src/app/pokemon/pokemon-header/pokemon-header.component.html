@@ -1,0 +1,8 @@
+<header class="header">
+    <h1 class="header__title">{{ title }}</h1>
+    <div class="header__controls" 
+        (click)="styleChange.emit()">
+        <button *ngIf="style === 'dash'" class="header__button header__button--dash">Dashboard view</button>
+        <button *ngIf="style === 'row'" class="header__button header__button--list">List view</button>
+    </div>
+</header>
