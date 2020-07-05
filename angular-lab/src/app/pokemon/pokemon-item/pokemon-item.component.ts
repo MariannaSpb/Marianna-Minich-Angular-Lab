@@ -11,10 +11,11 @@ import { Pokemon, PokemonWithAction } from '../../pokemon';
 export class PokemonItemComponent implements OnInit {
   @Input() public pokemon: Pokemon; //получаем объект покемона из родителя
   @Input() public style: string;
-  @Output() public actionValue = new EventEmitter(); //будем передавать родителю инфу о том, что нужно сделать с дочерним комп-ом
+  @Output() public actionValue = new EventEmitter() //будем передавать родителю инфу о том, что нужно сделать с дочерним комп-ом
 
-  isbordered = false;
+  isbordered:boolean = false;
   damageLevel = 50
+
 
   checkDamage() {
     this.pokemon.damage > this.damageLevel ? this.isbordered = true : this.isbordered
@@ -25,12 +26,8 @@ export class PokemonItemComponent implements OnInit {
     this.checkDamage();
   }
 
-  onClickHandler(event): void {
-    const action: boolean = event.target.classList.contains('pokemon__button--catch')  ?  true : false;
-    const PokemonWithAction: PokemonWithAction = {
-      name: this.pokemon.name,
-      action: action
-    }
-    this.actionValue.emit(PokemonWithAction);
+  onClickHandler(action): void {
+  this.pokemon.isCaught = !this.pokemon.isCaught
+  this.actionValue.emit(this.pokemon)
   }
 }

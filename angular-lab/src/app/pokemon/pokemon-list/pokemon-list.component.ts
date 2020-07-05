@@ -1,4 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, 
+  OnInit, 
+  Input, 
+} from '@angular/core';
 import { Pokemon } from '../../pokemon';
 import { PokemonService } from '../pokemon-service.service';
 
@@ -14,7 +17,7 @@ export class PokemonListComponent implements OnInit {
   pokemonsList: Pokemon[]
   
   constructor(private pokemonService: PokemonService) { } //тут логика получения покемонов
-  
+ 
   getData(): void {
     this.pokemonService.getPokemons()
         .subscribe(pokemonsList => this.pokemonsList = pokemonsList);
@@ -24,9 +27,10 @@ export class PokemonListComponent implements OnInit {
     this.getData();
   }
 
+ 
   getAction(obj) {
-  const actionStatus = obj.action ? 'caught' : 'realised'
-  console.log(`Pockemon ${obj.name} was ${actionStatus}`);
+  const actionStatus = obj.isCaught ? 'realised' : 'caught'
+  console.log(`Pokemon ${obj.name} was ${actionStatus}`);
   }
 
-}
+} 
