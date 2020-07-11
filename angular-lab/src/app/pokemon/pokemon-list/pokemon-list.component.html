@@ -1,0 +1,13 @@
+<section class="pokemon">  
+    <ul class="pokemon__list"
+    [ngClass]="{'pokemon__list--row': style ==='row'}">
+        <app-pokemon-item *ngFor="let pokemon of pokemonsList"
+            [pokemon]="pokemon"
+            (actionValue)="getAction($event)"
+            [id]="pokemon.id"
+            [style]="style"
+            #button
+            >
+        </app-pokemon-item>
+    </ul>
+</section> 
