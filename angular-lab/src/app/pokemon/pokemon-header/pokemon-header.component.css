@@ -1,4 +1,12 @@
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
 .header__title {
+    margin: 0;
     font-size: 72px;
     background: -webkit-linear-gradient(#eee, #33B);
     -webkit-background-clip: text;
@@ -6,11 +14,11 @@
     text-align: center;
 }
 
-.header__controls {
+.header__controls-wrapper {
+    justify-content: space-between;
     display: flex;
-    justify-content: space-around;
-    width: max-content;
-    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 35px;
 }
 
 .header__button {

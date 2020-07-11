@@ -1,10 +1,16 @@
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+import { Component, 
+  OnInit, 
+  Output, 
+  EventEmitter, 
+  Input,
+} from '@angular/core';
+
 
 
 @Component({
   selector: 'app-pokemon-header',
   templateUrl: './pokemon-header.component.html',
-  styleUrls: ['./pokemon-header.component.css']
+  styleUrls: ['./pokemon-header.component.css'],
 })
 export class PokemonHeaderComponent implements OnInit {
   @Input() style: string;

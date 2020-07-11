@@ -8,9 +8,23 @@ import { Observable, of } from 'rxjs';
 })
 export class PokemonService {
 
+
   constructor() { }
 
-  getPokemons(): Observable<Pokemon[]> {
+  getAll(): Observable<Pokemon[]> {
     return of(POKEMONS);
+  }
+
+  filter(): any {
+   return [...POKEMONS].sort((a, b): any => {
+    return a.name.localeCompare(b.name);
+  })
+
+  }
+
+  getById(): any {
+    POKEMONS.map((item) => {
+      console.log('this is id number:', item.id)
+    })
   }
 }

@@ -1,0 +1,21 @@
+
+.header__search-input {
+    border-color: #6c757d;
+    border-radius: 8px;
+    min-height: 38px;
+    border: 1px solid white;
+    min-width: 150px;
+    margin-right: 40px;
+    box-sizing: border-box;
+    padding: 10px;;
+}
+
+.header__search-button {
+    padding: 11px 17px;
+    width: 200px;
+    background: rgb(245,209,185);
+    background: linear-gradient(337deg, rgba(245,209,185,1) 13%, rgba(245,36,9,0.40129555240064774) 87%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

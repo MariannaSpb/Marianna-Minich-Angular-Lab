@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonItemComponent } from './pokemon-item/pokemon-item.component';
 import { PokemonHeaderComponent } from './pokemon-header/pokemon-header.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -10,7 +11,7 @@ import { PokemonHeaderComponent } from './pokemon-header/pokemon-header.componen
   declarations: [
     PokemonListComponent, 
     PokemonItemComponent, 
-    PokemonHeaderComponent],
+    PokemonHeaderComponent, SearchComponent],
   imports: [
     CommonModule
   ],

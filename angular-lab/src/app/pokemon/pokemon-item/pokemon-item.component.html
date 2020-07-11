@@ -5,7 +5,7 @@
         {{ pokemon.name | uppercase }}
     </h2>
     <div class="pokemon__wrapper"
-        [ngClass]="{'hidden': style ==='row'}">
+        [ngClass]="{'pokemon__item--row': style ==='row'}">
         <div class="pokemon__inner">
             <img class="pokemon__img" 
             [src]="'../../../assets/images/' + pokemon.id + '.png'" alt="{{ pokemon.name }}" />

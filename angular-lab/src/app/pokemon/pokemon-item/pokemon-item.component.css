@@ -33,11 +33,11 @@
 }
 
 
-.pokemon__img--lines {
+.pokemon__img--row {
     display: none;
 }
 
-.hidden {
+.pokemon__item--row {
     display: none;
 }
 

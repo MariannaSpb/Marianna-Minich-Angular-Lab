@@ -1,6 +1,6 @@
 <section class="pokemon">  
     <ul class="pokemon__list"
-    [ngClass]="{'pokemon__list--lines': style ==='row'}">
+    [ngClass]="{'pokemon__list--row': style ==='row'}">
         <app-pokemon-item *ngFor="let pokemon of pokemonsList"
             [pokemon]="pokemon"
             (actionValue)="getAction($event)"
@@ -11,4 +11,3 @@
         </app-pokemon-item>
     </ul>
 </section> 
-
