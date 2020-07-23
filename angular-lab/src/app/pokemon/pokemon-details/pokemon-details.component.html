@@ -1,0 +1,24 @@
+<section class="pokemon__details">
+    <div class="pokemon__image-container">
+        <img class="pokemon__img" 
+        [src]="'../../../assets/images/' + pokemon.id + '.png'" alt="{{ pokemon.name }}" />
+    </div>
+    <div class="pokemon__info">
+        <h2 class="pokemon__name">
+            {{ pokemon.name | uppercase }}
+        </h2>
+        <div class="pokemon__description">
+            <p class="pokemon__damage">Damage: {{ pokemon.damage }}</p>
+            <p class="pokemon__id">ID: {{ pokemon.id }}</p>
+            <p class="pokemon__date">Was created: {{ pokemon.date }}</p>
+        </div>
+        <div class="pokemon__button-container">
+            <button (click)="toggleAction()"
+                    class="pokemon__button-action">{{ pokemon.isCaught ? 'Catch' : 'Release'}}</button>
+            <button class="pokemon__button-edit">
+                Edit
+            </button>
+        </div>
+    </div>
+  
+</section>

@@ -1,17 +1,21 @@
 <li class="pokemon__item"
 [ngClass]="{bordered: isbordered}"
 >
-    <h2 class="pokemon__name">
-        {{ pokemon.name | uppercase }}
+    <h2 class="pokemon__name" routerLink="/detail/{{ pokemon.id }}">
+        {{ pokemon.name | uppercase }} 
     </h2>
-    <div class="pokemon__wrapper"
-        [ngClass]="{'pokemon__item--row': style ==='row'}">
-        <div class="pokemon__inner">
-            <img class="pokemon__img" 
-            [src]="'../../../assets/images/' + pokemon.id + '.png'" alt="{{ pokemon.name }}" />
+    <div class="pokemon__wrapper">
+        <div class="pokemon__inner" [ngClass]="{'pokemon__item--row': style ==='row'}">
+            <img class="pokemon__img" routerLink="/detail/{{ pokemon.id }}"
+            [src]="'../../../assets/images/' + pokemon.id + '.png'" alt="{{ pokemon.name }} " />
             <p class="pokemon__damage">Damage: {{pokemon.damage}}</p>
         </div>
     </div>
     <button (click)="onClickHandler($event)"
             class="pokemon__button">{{ pokemon.isCaught ? 'Catch' : 'Release'}}</button>
+    <button class="pokemon__button pokemon__button-edit">
+        Edit
+    </button>
 </li>
+
+<!-- routerLink="/detail/{{ pokemon.id }} -->

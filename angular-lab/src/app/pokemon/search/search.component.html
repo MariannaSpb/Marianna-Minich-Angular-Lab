@@ -1,8 +1,10 @@
-<div class="header__search-container" >
-    <input class="header__search-input" 
+<form class="header__search-form"  (ngSubmit)="onSubmit()">
+    <input 
+    class="header__search-input" 
     name="search"
     type="text"
-    placeholder="Name"
-    >
-    <button class="header__search-button">Search</button>
-</div>
+    placeholder="Type name"
+    [(ngModel)]="nameValue"
+    />
+    <button type="submit" class="header__search-button">Search</button> 
+</form>

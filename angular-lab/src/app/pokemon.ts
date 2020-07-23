@@ -3,10 +3,6 @@ export interface Pokemon {
     name: string;
     damage: number;
     isCaught: boolean;
+    date: Date;
 }
 
-
-export interface PokemonWithAction {
-    name: string;
-    action: boolean;
-}

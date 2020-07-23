@@ -19,7 +19,7 @@ import { Pokemon } from '../../pokemon';
 
 export class PokemonItemComponent implements OnInit {
   @Input() public pokemon: Pokemon; //получаем объект покемона из родителя
-  @Input() public style: string;
+  @Input() public style: string; //получили стили из компонента списка,  который получает стили из сервиса.
   @Output() public actionValue = new EventEmitter() //будем передавать родителю инфу о том, что нужно сделать с дочерним комп-ом
 
   isbordered:boolean = false;
