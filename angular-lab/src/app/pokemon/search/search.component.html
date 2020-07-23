@@ -1,0 +1,10 @@
+<form class="header__search-form"  (ngSubmit)="onSubmit()">
+    <input 
+    class="header__search-input" 
+    name="search"
+    type="text"
+    placeholder="Type name"
+    [(ngModel)]="nameValue"
+    />
+    <button type="submit" class="header__search-button">Search</button> 
+</form>

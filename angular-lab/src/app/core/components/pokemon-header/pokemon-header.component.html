@@ -1,0 +1,13 @@
+<header class="header">
+    <div class="header__controls-wrapper">
+        <h1 class="header__title" routerLink="/pokemons">{{ title }}</h1>
+        <div class="header__controls" 
+            (click)="onChangeStyle()">
+            <button *ngIf="getStyle() === 'dash'" class="header__button header__button--dash" routerLink="/pokemons">Dashboard view</button>
+            <button *ngIf="getStyle() === 'row'" class="header__button header__button--list" routerLink="/pokemons">List view</button>
+        </div>
+    </div>
+    <!-- <app-search (search)="onSearch($event)"></app-search> -->
+</header>
+
+

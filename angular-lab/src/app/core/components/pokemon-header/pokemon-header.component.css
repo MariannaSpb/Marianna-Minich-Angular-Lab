@@ -1,0 +1,33 @@
+.header {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee, #33B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    cursor: pointer;
+}
+
+.header__controls-wrapper {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.header__button {
+    padding: 11px 17px;
+    width: 200px;
+    background: rgb(245,209,185);
+    background: linear-gradient(337deg, rgba(245,209,185,1) 13%, rgba(245,36,9,0.40129555240064774) 87%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}

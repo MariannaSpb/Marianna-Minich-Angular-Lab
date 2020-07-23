@@ -1,0 +1,24 @@
+.pokemon {
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+
+}
+.pokemon__list {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2vw;
+    max-width: 798px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+    
+}
+
+.pokemon__list--row {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+}
+

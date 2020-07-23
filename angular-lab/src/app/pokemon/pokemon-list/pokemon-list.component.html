@@ -1,0 +1,16 @@
+<section class="pokemon">  
+    <app-search (searchData)="onSearch($event)"></app-search>
+    <ul class="pokemon__list"
+    [ngClass]="{'pokemon__list--row': styleView ==='row' } ">
+        <app-pokemon-item *ngFor="let pokemon of pokemonsList"
+            [pokemon]="pokemon"
+            (actionValue)="getAction($event)"
+            [id]="pokemon.id"
+            [style]="styleView"
+            #button
+            >
+        </app-pokemon-item>
+    </ul>
+<!-- <app-pokemon-details *ngFor="let pokemon of pokemonsList"
+[pokemon]="pokemon"></app-pokemon-details> -->
+</section> 
